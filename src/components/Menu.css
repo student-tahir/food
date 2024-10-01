@@ -1,70 +1,142 @@
-.menu{
+/* Base styles for large screens */
+.menu {
     padding: 50px;
     text-align: center;
     background-color: #f8f8f8;
 }
-.menu h2{
+
+.menu h2 {
     font-family: 'Brush Script MT', cursive;
     font-size: 48px;
     margin-bottom: 30px;
 }
-.menu-categories{
+
+.menu-categories {
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
-
+    margin: 30px;
+    padding: 30px;
 }
-.menu-categories button{
+
+.menu-categories button {
     background-color: transparent;
     border: none;
-    font-size: 18px;
-    margin-block: 50px;
+    font-size: 20px;
+    margin-block: 20px;
     cursor: pointer;
     color: #000;
     text-align: center;
 }
-.menu-categories button.active{
+
+.menu-categories button.active {
     color: #ffa500;
     font-weight: bold;
 }
-.menu-items{
+
+.menu-items {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
 }
-.menu-card{
+
+.menu-card {
     background-color: #1a1a1a;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px black;
     color: white;
 }
-.menu-card img{
+
+.menu-card img {
     width: 100%;
     height: 150px;
     object-fit: cover;
 }
-.menu-card-content{
-    padding: 20px;
 
+.menu-card-content {
+    padding: 20px;
 }
-.menu-card h3{
+
+.menu-card h3 {
     font-size: 20px;
     margin-bottom: 10px;
 }
-.menu-card p{
+
+.menu-card p {
     font-size: 14px;
     margin-bottom: 20px;
 }
-.Menu-card-price{
+
+.menu-card-price {
     font-size: 18px;
     font-weight: bold;
-    
 }
-.menu-card .order-button{
+
+.menu-card .order-button {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .menu h2 {
+        font-size: 36px;
+    }
+
+    .menu-categories button {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 992px) {
+    .menu {
+        padding: 30px;
+    }
+
+    .menu-categories {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0;
+    }
+
+    .menu-categories button {
+        margin: 10px 0;
+    }
+
+    .menu-items {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        padding: 20px;
+    }
+
+    .menu h2 {
+        font-size: 28px;
+    }
+
+    .menu-categories button {
+        font-size: 20px;
+    }
+
+    .menu-items {
+        grid-template-columns: 1fr; /* Stack items in a single column */
+    }
+
+    .menu-card h3 {
+        font-size: 18px;
+    }
+
+    .menu-card p {
+        font-size: 12px;
+    }
+
+    .menu-card-price {
+        font-size: 16px;
+    }
 }
 

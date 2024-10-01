@@ -1,5 +1,5 @@
 .header{
-    background: url('momo-bg jpg.jpg') no-repeat center center/cover;
+    background: url('momo2.png') no-repeat center center/cover;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -14,6 +14,7 @@
     max-width: 100%;
     width: 600px;
     margin-left: 5%;
+    
     
 }
 .slider-text{
@@ -34,12 +35,5 @@
 /*.carousel .control-dots{
     position: absolute;
     bottom: 2rem;
-    background-color: black; 
-} */
-.carousel .control-dots .dot{
-     background-color: #ffa600;
-     box-shadow: none;
-}
-.carousel .control-dots .dot.selected{
-    background-color: #ffa600cf;
-}
+    background-color: black;
+}*/

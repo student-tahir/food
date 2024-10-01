@@ -4,7 +4,7 @@ import { FaShoppingCart } from "react-icons/fa";
 
 const Promotions = () => {
   return (
-    <div className="promotions">
+    <div className="promotions" id="">
       <div className="promotion-card">
         <img src="./images/f3.png.jfif" alt="maggie" />
 

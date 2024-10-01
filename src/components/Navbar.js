@@ -7,22 +7,30 @@ import {
   FaBars,
   FaTimes,
 } from "react-icons/fa";
+import { Link } from "react-scroll"; // Import Link from react-scroll
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
+
   return (
     <nav className="navbar">
-      <h1 className="navbar-logo">Sea Beach</h1>
+      <h1 className="navbar-logo">Sea Beach Cafe</h1>
       <div className={isMobile ? "nav-links-mobile" : "nav-links"}>
-        <a href="home">Home</a>
-        <a href="menu">Menu</a>
-        <a href="about">About</a>
-        <a href="Book-Table">Book Table</a>
-        <FaUser className="nav-icon"></FaUser>
-        <FaShoppingCart className="nav-icon"></FaShoppingCart>
-        <FaSearch className="nav-icon"></FaSearch>
-        <FaBars className="nav-icon"></FaBars>
-        <button className="order-button">Order Online</button>
+        <Link to="home" smooth={true} duration={500}>
+          Home
+        </Link>
+        <Link to="menu" smooth={true} duration={500}>
+          Menu
+        </Link>
+        <Link to="Book-Table" smooth={true} duration={500}>
+          Book Table
+        </Link>
+        <Link to="testimonial-slider" smooth={true} duration={500}>
+          Review
+        </Link>
+        <FaUser className="nav-icon" />
+        <FaShoppingCart className="nav-icon" />
+        <FaSearch className="nav-icon" />
       </div>
       <div className="Mobile-menu-icon" onClick={() => setIsMobile(!isMobile)}>
         {isMobile ? <FaTimes /> : <FaBars />}

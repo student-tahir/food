@@ -4,14 +4,14 @@ import "./TestimonialSlider.css";
 const testimonial = [
   {
     name: "Musharraf Bhai",
-    text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem corrupti possimus esse, veniam quasi nostrum adipisci nam? Quibusdam quos itaque ut magnam sed culpa sint. Cumque modi illum eligendi quidem ipsam dolor nulla eius.",
+    text: "Customers expect food to be delivered quickly, and delays can lead to disappointment and loss of business. Quality customer service Customers expect quality customer service along with their food delivery. ",
     image: "images/client2.jpg",
-    designation: "magna aliqua",
+    designation: "Patna-Bihar",
   },
 
   {
     name: "Saheb Bhai",
-    text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem corrupti possimus esse, veniam quasi nostrum adipisci nam? Quibusdam quos itaque ut magnam sed culpa sint. Cumque modi illum eligendi quidem ipsam dolor nulla eius.",
+    text: "Accuracy: Customers expect to receive the correct order. Transparency Customers appreciate companies that are transparent and have effective communication strategies.",
     image: "images/client1.jpg",
     designation: "magna aliqua",
   },
@@ -30,7 +30,7 @@ const TestimonialSlider = () => {
   };
 
   return (
-    <div className="testimonial-Slider">
+    <div className="testimonial-slider">
       <h2>What Says Our Customers</h2>
       <div className="testimonial-container">
         {testimonial.map((testimonial, index) => (
