@@ -22,17 +22,22 @@ const Footer = () => {
         </p>
         <p>
           <FaPhone />
-          +91 8789502255
+          Call +91 8789502255
         </p>
         <p>
           <FaEnvelope />
-          tahirperwaiz786@gmail.com
+          xyz@gmail.com
         </p>
       </div>
 
       <div className="footer-section">
-        <h3>Sea Beach</h3>
-        <p>sidhi ghat, opp. Pilar no-159 Sadikpur, Patna,Bihar 800008</p>
+        <h3>frame</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab sapiente
+          odio totam necessitatibus repellendus odit, voluptatem eius, et
+          reiciendis in exercitationem architecto, qui suscipit laudantium
+          tempore aperiam ex enim quia eveniet corporis libero iste.
+        </p>
       </div>
       <div className="social-icons">
         <FaFacebookF />
@@ -45,12 +50,12 @@ const Footer = () => {
       <div className="footer-section">
         <h3>Opening House</h3>
         <p>Everyday</p>
-        <p>10.00 Am _10.00pm</p>
+        <p>10.00 Am _10.00m</p>
       </div>
 
       <div className="footer-bottom">
-        <p>@ 2024 All right Reserved by Free Aproved</p>
-        <p>@ distributed by Sea Beach</p>
+        <p>@ 2024 All right Reserved Vy Free Apoorv</p>
+        <p>@ distributed by Apoorv</p>
       </div>
     </footer>
   );

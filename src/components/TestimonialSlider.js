@@ -1,67 +1,58 @@
+// src/TestimonialSlider.js
 import React, { useState } from "react";
-import "./TestimonialSlider.css";
+import "./TestimonialSlider.css"; // CSS file for styling
 
-const testimonial = [
+const testimonials = [
   {
     name: "Musharraf Bhai",
-    text: "Customers expect food to be delivered quickly, and delays can lead to disappointment and loss of business. Quality customer service Customers expect quality customer service along with their food delivery. ",
-    image: "images/client2.jpg",
+    text: "Customers expect food to be delivered quickly, and delays can lead to disappointment and loss of business. Quality customer service is essential.",
+    image: "images/client2.jpg", // Use placeholder images or your own images
     designation: "Patna-Bihar",
   },
-
   {
     name: "Saheb Bhai",
-    text: "Accuracy: Customers expect to receive the correct order. Transparency Customers appreciate companies that are transparent and have effective communication strategies.",
-    image: "images/client1.jpg",
-    designation: "magna aliqua",
+    text: "Accuracy: Customers expect to receive the correct order. Transparency is crucial in effective communication.",
+    image: "images/client1.jpg", // Use placeholder images or your own images
+    designation: "Mumbai",
   },
 ];
+
 const TestimonialSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handlepreclick = () => {
+  const handlePrevClick = () => {
     setCurrentIndex(
-      (preindex) => (preindex - 1 + testimonial.length) % testimonial.length
+      (prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length
     );
   };
 
-  const handleNextclick = () => {
-    setCurrentIndex((preindex) => (preindex + 1) % testimonial.length);
+  const handleNextClick = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
   };
 
   return (
     <div className="testimonial-slider">
-      <h2>What Says Our Customers</h2>
-      <div className="testimonial-container">
-        {testimonial.map((testimonial, index) => (
-          <div
-            key={index}
-            className={`testimonial ${index === currentIndex ? "active" : ""}`}
-          >
-            <p>{testimonial.text}</p>
-            <h4>{testimonial.name}</h4>
-            <h5>{testimonial.designation}</h5>
+      <h2>What Our Customers Say</h2>
+      <div
+        className="testimonial-container"
+        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+      >
+        {testimonials.map((item, index) => (
+          <div key={index} className="testimonial">
+            <img
+              src={item.image}
+              alt={item.name}
+              className="testimonial-image"
+            />
+            <p>{item.text}</p>
+            <h4>{item.name}</h4>
+            <h5>{item.designation}</h5>
           </div>
         ))}
-        ;
       </div>
-
-      <div className="testimonial-navigation">
-        {testimonial.map((testimonial, index) => (
-          <img
-            key={index}
-            src={testimonial.image}
-            alt={testimonial.name}
-            className={`testimonial-image ${
-              index === currentIndex ? "active" : ""
-            }`}
-          />
-        ))}
-        ;
-      </div>
-      <div className="slider-control">
-        <button onClick={handlepreclick}>&lt;</button>
-        <button onClick={handleNextclick}>&gt;</button>
+      <div className="slider-controls">
+        <button onClick={handlePrevClick}>&lt;</button>
+        <button onClick={handleNextClick}>&gt;</button>
       </div>
     </div>
   );
